@@ -1,0 +1,394 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Josefin+Sans&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            overflow-y: scroll;
+            height: 100%;
+            font: 100%/1.5 sans-serif;
+            word-wrap: break-word;
+            margin: 0 auto;
+            padding: 1.5em;
+        }
+
+        @media (min-width: 768px) {
+            html {
+                font-size: 125%;
+                max-width: 55em;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 2.5rem 0 1.5rem 1.5rem;
+            line-height: 1.25;
+            color: #333;
+            font-family: "Arvo", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        a {
+            color: #fa6432;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: underline;
+        }
+
+        p {
+            margin: 1em 1.5em;
+            line-height: 1.5;
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        p code {
+            background-color: #eee;
+            padding: 0.05em 0.2em;
+            border: 1px solid #ccc;
+        }
+
+        ol,
+        ul {
+            margin: 1em;
+        }
+
+        ol li ol,
+        ol li ul,
+        ul li ol,
+        ul li ul {
+            margin: 0 2em;
+        }
+
+        ol li p,
+        ul li p {
+            margin: 0;
+        }
+
+        dl {
+            font-family: monospace, monospace;
+        }
+
+        dl dt {
+            font-weight: bold;
+        }
+
+        dl dd {
+            margin: -1em 0 1em 1em;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            -webkit-box-shadow: 5px 5px 22px -5px rgba(0, 0, 0, 0.39);
+            box-shadow: 5px 5px 22px -5px rgba(0, 0, 0, 0.39);
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        blockquote {
+            padding-left: 1em;
+            font-style: italic;
+            border-left: solid 1px #fa6432;
+        }
+
+        table {
+            font-size: 1rem;
+            text-align: left;
+            caption-side: bottom;
+            margin-bottom: 2em;
+        }
+
+        table * {
+            border: none;
+        }
+
+        table thead,
+        table tr {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        table tr:nth-child(even) {
+            background-color: rgba(200, 200, 200, 0.2);
+        }
+
+        table tbody {
+            display: block;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        table td,
+        table th {
+            padding: 0.25em;
+        }
+
+        table,
+        .highlight>pre,
+        pre.example {
+            max-height: 70vh;
+            margin: 1em 0;
+            padding: 1em;
+            overflow: auto;
+            font-size: 0.85rem;
+            font-family: monospace, monospace;
+            border: 1px dashed rgba(250, 100, 50, 0.5);
+        }
+
+        .title {
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            font-weight: normal;
+            font-size: 0.75em;
+            color: #666;
+        }
+
+        .tags {
+            margin-top: -1.5rem;
+            padding-bottom: 1.5em;
+        }
+
+        .tags li {
+            display: inline;
+            margin-right: 0.5em;
+        }
+
+        figure {
+            margin: 1em 0;
+        }
+
+        figure figcaption {
+            font-family: monospace, monospace;
+            font-size: 0.75em;
+            text-align: center;
+            color: grey;
+        }
+
+        .footnote-definition sup {
+            margin-left: -1.5em;
+            float: left;
+        }
+
+        .footnote-definition .footnote-body {
+            margin: 1em 0;
+            padding: 0 1em;
+            border: 1px dashed rgba(250, 100, 50, 0.3);
+            background-color: rgba(200, 200, 200, 0.2);
+        }
+
+        .footnote-definition .footnote-body p:only-child {
+            margin: 0.2em 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header a+a {
+            margin-left: 1rem;
+        }
+
+        .posts {
+            margin: 0;
+            list-style: none;
+        }
+
+        .posts .post a {
+            display: flex;
+            padding: 0.5em 0;
+            color: black;
+        }
+
+        .posts .post a:hover,
+        .posts .post a:focus,
+        .posts .post a:active {
+            text-decoration: none;
+            background: rgba(200, 200, 200, 0.2);
+        }
+
+        .posts .post date {
+            font-family: monospace, monospace;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            padding-right: 2rem;
+            color: grey;
+        }
+    </style>
+    <title>My Adventures in Like A Dragon: Infinite Wealth</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1 class="title">My Adventures in Like A Dragon: Infinite Wealth
+            <br>
+            <span class="subtitle">Ive taken ever so many pics</span>
+        </h1>
+
+        <p>
+            This is Ichiban Kasuaga
+        </p>
+        <img src="2024_03_28_20_25_58.jpg" />
+        <p>
+            He is the main character of the game and this is his 2nd game where he goes to hawaii, he has so much fun on
+            his trip with his friends
+        </p>
+        <img src="2024_03_24_19_11_18.jpg" />
+        <p>
+            I found this man working outside a cafe and used the camera to zoom in on his laptop to see what fun work he
+            was doin
+        </p>
+        <img src="2024_03_25_18_06_55.jpg" />
+        <p>
+            I then felt self conscious so i tried to hide that i was taking pics of him by taking an stealthy selfie
+        </p>
+        <img src="2024_03_25_18_07_32.jpg" />
+        <p>
+            I thought i got away with this until i turned around
+        </p>
+        <img src="2024_03_25_18_07_14.jpg" />
+        <p>
+            So i ran away.... And then came back with a friend
+        </p>
+        <img src="2024_03_25_18_23_23.jpg" />
+
+        <p>
+            Then came back again later that night with some more friends
+        </p>
+        <img src="2024_03_28_20_30_43.jpg" />
+        <p>
+            And did an #throwback selfie
+        </p>
+        <img src="2024_03_28_20_31_14.jpg" />
+        <p>
+            I don't know what this npc’s name is but its a vibe
+        </p>
+        <img src="2024_03_28_20_31_22.jpg" />
+        <p>
+            This guy started flexing when i pulled the camera out and i think thats fun
+        </p>
+        <img src="2024_04_10_15_53_01.jpg" />
+        <p>
+
+            Then i found out thers an fisheye filter and went a bit nuts, for some reason i found out about this filter
+            while i was standing in a bathroom and i can only imagine how confused this man must be
+        </p>
+        <img src="2024_04_07_08_11_49.jpg" />
+
+        <p>
+
+            I was stalking this guy for a while trying to take the perfect shot
+        </p>
+        <img src="2024_04_10_15_59_16.jpg" />
+        <p>
+
+            Ended up taking it through the arm of a person who was stopped at the traffic lights
+        </p>
+        <img src="2024_04_10_15_59_40.jpg" />
+        <p>
+
+            Looked up and arm man didnt seem that happy with me
+        </p>
+        <img src="2024_04_10_15_59_45.jpg" />
+        <p>
+
+
+            Saw this cool dog
+        </p>
+        <img src="2024_04_10_23_51_52.jpg" />
+        <p>
+
+            This person was trapped inside of this building alone and that made me sad, i took a lot of photos to convey
+            how
+            sad i was
+        </p>
+        <img src="2024_04_16_00_06_55.jpg" />
+        <img src="2024_04_16_00_07_04.jpg" />
+        <img src="2024_04_16_00_07_15.jpg" />
+        <img src="2024_04_16_00_08_08.jpg" />
+        <img src="2024_04_16_00_08_20.jpg" />
+
+        <p>
+
+            Had to stop to admire this street artists talents
+        </p>
+        <img src="2024_04_24_16_01_13.jpg" />
+        <p>
+
+            Found out taking a selfie infront of a car makes them stop
+        </p>
+        <img src="2024_04_25_12_16_45.jpg" />
+
+        <p>
+
+            They dont honk at you and this is the most unrealistic thing i could imagine </p>
+        <img src="2024_04_25_12_16_53.jpg" />
+
+        <p>
+
+            Then i spent a full weekend going mad on the animal crossing mini game</p>
+        <img src="2024_04_25_16_33_19.jpg" />
+
+        <p>
+
+            People wre more likely to come to my island because i had an cellblock tower and this old building </p>
+        <img src="2024_04_26_15_19_46.jpg" />
+
+
+
+        <p>
+
+            The game also let me put multiple cars inside of his house so you bet i did that </p>
+        <img src="2024_04_28_15_53_27.jpg" />
+
+        <p>
+            Overall this mini game distraction was quite fun and pretty but i eventually had to retrun to the main game
+        </p>
+        <img src="2024_04_28_19_39_17.jpg" />
+
+        <p>Which is of course annoying NPCS
+        </p>
+        <img src="2024_04_28_22_17_53.jpg" />
+        <img src="2024_04_28_22_17_57.jpg" />
+        <img src="2024_04_28_22_18_05.jpg" />
+        <img src="2024_04_28_22_18_10.jpg" />
+    </div>
+
+
+</body>
+
+</html>
